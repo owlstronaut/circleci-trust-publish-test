@@ -10,13 +10,22 @@ Used for bug-bashing the CircleCI trusted publisher UI flows on wubwub. This pac
 
 ### 1. CircleCI
 
-- Create a project on CircleCI connected to the `owlstronaut/circleci-trust-publish-test` GitHub repo
-- Enable OIDC in project settings
-- Run the `debug-workflow` first to get claim values (org-id, project-id)
+| Field | Value |
+|-------|-------|
+| Org ID | `83358abe-db19-405f-8f81-b6cdde80fcb6` |
+| Org Slug | `circleci/HCjRLCEAXeekHAXiqAJaCV` |
+| Project ID | `020e7c31-adeb-4b15-afb5-3a63541f483c` |
+| Project Slug | `circleci/HCjRLCEAXeekHAXiqAJaCV/FjJnKQnYK6UzgQ6YLgFbh` |
+| Pipeline Definition ID | `c807691a-0a0f-4020-9a50-10bd88198b14` |
 
 ### 2. npm Trusted Publishing
 
-Configure the trusted publisher on [npmjs.com](https://www.npmjs.com/package/@owlstronaut/circleci-trust-publish-test/access) with the org-id and project-id from the debug workflow.
+Configure the trusted publisher on [npmjs.com](https://www.npmjs.com/package/@owlstronaut/circleci-trust-publish-test/access) with:
+
+```
+org_id: 83358abe-db19-405f-8f81-b6cdde80fcb6
+project_id: 020e7c31-adeb-4b15-afb5-3a63541f483c
+```
 
 ## Workflows
 
